@@ -1,0 +1,31 @@
+1. Run shell
+openssl genrsa -des3 -out server.key 1024
+type: opensslkey
+
+2. Create openssl.cnf frm:
+http://www.flatmtn.com/article/setting-openssl-create-certificates
+
+openssl req -new -key server.key -out server.csr
+type:
+opensslkey
+DIS Name Surname
+DIS
+your@email.com
+City
+Region
+Country code
+localhost
+
+3. openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
+
+4. Cut:
+server.crt server.key server.csr 
+to: xampp/apache/conf ssl..crt ssl.csr sslkey
+
+5. Copy:
+server.key
+to: xampp main folder
+type: openssl rsa -in server.key -out s.key
+opensslkey
+delete: server.key 
+rename: s.key to: server.key and paste to: ssl.key
