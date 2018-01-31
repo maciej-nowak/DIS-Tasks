@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="2.5">
+	<name>Sprawdz pogode - Maciej Nowak</name>
+	<author>Maciej Nowak</author>
+	<version>1.0 RC</version>
+	<description>Sprawdzanie pogody w danym miescie</description>
+	<files>
+		<filename module="mod_weather">mod_weather.php</filename>
+	</files>
+</install>
